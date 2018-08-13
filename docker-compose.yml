@@ -1,0 +1,13 @@
+version: '3'
+services:
+  react:
+    build: dev/mobilebuilder
+    images: danghieu193/react-native
+    volumes:
+      - .:/usr/src/app
+    working_dir: /usr/src/app
+    command: sh ./dev/mobilebuilder/mobile.dev.sh
+    ports:
+      - 3000:3000
+      - 19000:19000
+      - 19001:19001
